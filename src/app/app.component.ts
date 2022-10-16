@@ -7,20 +7,19 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
   {{valor}}
   <button (click)="adicionar()">Adicionar</button>
   <br>
-  <button (click)="destruirComponent()") >destruir Component</button>
+  <button  (click)="destruirComponent()">Destruir</button>
   <router-outlet></router-outlet>
   `
 })
 export class AppComponent implements OnInit, DoCheck,AfterContentInit,AfterContentChecked,AfterViewInit,AfterViewChecked {
-  public destruir = true;
+  public destruir:boolean = true;
   public valor:number = 1;
 
   constructor(){}
 
   public destruirComponent(){
-this.destruir = false;
+    this.destruir = false;
   }
-  
 
   public adicionar():number{
     return this.valor +=1;
