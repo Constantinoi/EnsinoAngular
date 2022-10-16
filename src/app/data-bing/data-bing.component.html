@@ -7,7 +7,7 @@
 
 <hr> 
 
-<h1>Property binding</h1>
+<h1>Property Binding</h1>
 
 <button  [disabled]="btnDisable">Botão</button>
 <button  [disabled]="!btnDisable">Botão</button>
@@ -16,3 +16,8 @@
 <img [src]="urlImagem" [alt]="dsImagem" [name]="dsImagem"/>
 
 <hr>
+<h1>Event Binding</h1>
+
+<button (click)="alertaTest('Teste12')"> Alerta</button>
+<div (mousemove)="moveMouse($event)" style="background: red; width: 300px; height: 300px;"></div>
+<p>{{ position.x}} - {{position.y}}</p>
