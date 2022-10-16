@@ -21,3 +21,9 @@
 <button (click)="alertaTest('Teste12')"> Alerta</button>
 <div (mousemove)="moveMouse($event)" style="background: red; width: 300px; height: 300px;"></div>
 <p>{{ position.x}} - {{position.y}}</p>
+
+<hr>
+<h1>Two-way Binding</h1>
+
+<input [(ngModel)] ="nome">
+{{nome}}
