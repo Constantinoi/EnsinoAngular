@@ -10,6 +10,10 @@ export class DataBingComponent implements OnInit {
   public nome :string = "Constantino";
   public idade:number = 28;
 
+  public btnDisable:boolean = true;
+  public urlImagem:string = "https://vidafullstack.com.br/wp-content/uploads/2019/08/logo-4.png";
+  public dsImagem:string = "vida full Stack"
+
   constructor() { }
 
   ngOnInit(): void {
