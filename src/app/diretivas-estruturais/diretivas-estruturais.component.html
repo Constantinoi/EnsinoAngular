@@ -12,4 +12,20 @@
 <p *ngIf="!condicaoClick">False</p>
 
 <button (click)="cliquei()">Clicar</button>
+
 <hr>
+<h2>NGFOR</h2>
+
+<ul>
+    <li *ngFor="let item of list;  index as i; first as isfirst; even as par" (click)="onClickEvent(i)">[{{i}}] - {{ item.nome }} - {{item.idade}} <span *ngIf="isfirst"> - O Primeiro</span> <span *ngIf="par"> - Posicao Par</span></li>
+</ul>
+
+<button (click)="clickAdd()">Add</button>
+
+<hr>
+<input type="text"  [(ngModel)]="nome">
+<div [ngSwitch]="nome">
+<p *ngSwitchCase="'Consta'">Constantino</p>
+<p *ngSwitchCase="'Pesca'">Pesca</p>
+<p *ngSwitchDefault="">Errou</p>
+</div>
