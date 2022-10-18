@@ -1,0 +1,12 @@
+<h1>Diretivas de Atributos</h1>
+<div *ngIf="nome == 'Consta'">
+    <p [ngClass]="{concluido: verifica, pendente:!verifica}">ngClass</p>
+    <hr>
+    <p [ngStyle]="{height:altura,background:cor}">NgClass</p>
+</div>
+
+<hr>
+<input type="text" [(ngModel)]="nome">
+<button (click)="clicar()">Salvar</button>
+
+<li *ngFor="let item of list">{{item.nome}}</li>
