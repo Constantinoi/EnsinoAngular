@@ -3,6 +3,7 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
 @Component({
   selector: 'app-root',
   template:`
+  <app-new-componet></app-new-componet>
  <app-diretivas-atributos>
  <h1>Inicio</h1>
  <h3>Final</h3>
