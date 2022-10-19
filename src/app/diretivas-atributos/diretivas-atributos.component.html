@@ -19,3 +19,11 @@
 </ng-template>
 
 <ng-content select="h3"></ng-content>
+
+<hr>
+
+<h2>Pipes</h2>
+
+<li *ngFor="let item of list">{{item.nome | uppercase}}</li> 
+
+{{date | date:"dd/MM/yyyy"}}
