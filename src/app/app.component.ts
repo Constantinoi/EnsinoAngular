@@ -3,7 +3,11 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
 @Component({
   selector: 'app-root',
   template:`
- <app-diretivas-atributos></app-diretivas-atributos>
+ <app-diretivas-atributos>
+ <h1>Inicio</h1>
+ <h3>Final</h3>
+ </app-diretivas-atributos>
+
   <router-outlet></router-outlet>
   `
 })
