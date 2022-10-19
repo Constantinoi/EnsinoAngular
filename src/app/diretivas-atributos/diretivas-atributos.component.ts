@@ -11,7 +11,7 @@ export class DiretivasAtributosComponent implements OnInit {
   public altura: string = "20px";
   public cor: string = "silver";
   public nome: string = "";
-  public list: Array<{ nome: string }> = [];
+  public list: Array<{ nome: string }> = [{nome:"consta"}];
 
   constructor() { }
 
