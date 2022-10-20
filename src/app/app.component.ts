@@ -2,7 +2,7 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
 
 @Component({
   selector: 'app-root',
-  template:`
+  template: `
   <!--<app-new-componet></app-new-componet>
  <app-diretivas-atributos>
  <h1>Inicio</h1>
@@ -14,19 +14,35 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
   <app-input-component [contador] = "addContador"></app-input-component>
   <br>
   <button (click)="addNum()">ADD</button>
+
+  <hr>
+  
+  <ng-template [ngIf]="getDados">
+    <h1>{{getDados.nome}}</h1>
+    <h2>{{getDados.idade}}</h2>
+  </ng-template>
+
+  <app-output-component (enviarDados)="setDados($event)"></app-output-component>
   `
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
 
-  public addContador:number = 12;
+  public addContador: number = 12;
 
-  constructor(){}
+  public getDados: { nome: string, idade: number } | undefined;
+
+  constructor() { }
 
   ngOnInit(): void {
-   
+
   }
-  
-  public addNum(){
+
+  public addNum() {
     this.addContador += 1;
   }
+
+  public setDados(event: { nome: string, idade: number }) {
+    this.getDados = event;
+  }
+
 }

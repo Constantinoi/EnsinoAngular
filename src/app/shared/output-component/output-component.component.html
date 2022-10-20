@@ -1,0 +1,5 @@
+<div *ngFor ="let item of list; index as i">
+    {{item.nome}}
+    {{item.idade}}
+    <button (click)="getDados(i)">selecionar</button>
+</div>
