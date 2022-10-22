@@ -31,6 +31,7 @@ import {
   </ng-template>
 
   <app-output-component (enviarDados)="setDados($event)"></app-output-component>-->
+    <app-food-add></app-food-add>
     <app-food-list></app-food-list>
   `,
 })
